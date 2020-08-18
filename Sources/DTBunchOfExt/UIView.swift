@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    func findViewController() -> UIViewController? {
+    public func findViewController() -> UIViewController? {
         if let nextResponder = self.next as? UIViewController {
             return nextResponder
         } else if let nextResponder = self.next as? UIView {
@@ -11,7 +11,7 @@ extension UIView {
         }
     }
     
-    var isDarkMode: Bool {
+    public var isDarkMode: Bool {
         if let darkMode = findViewController()?.isDarkMode {
             return darkMode
         } else {

@@ -1,7 +1,7 @@
 import UIKit
 
 extension TimeInterval {
-    var timeString: String {
+    open var timeString: String {
         var timeStr: String = ""
         let hours = (Int(self) / 3600)
         timeStr.append("\(hours):")

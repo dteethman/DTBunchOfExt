@@ -1,5 +1,5 @@
 extension Int {
-    func getNoun(_ root: String, singleEnd: String, dualEnd: String, multipleEnd: String) -> String {
+    public func getNoun(_ root: String, singleEnd: String, dualEnd: String, multipleEnd: String) -> String {
         var resStr = root
         switch self % 10 {
         case 1:
