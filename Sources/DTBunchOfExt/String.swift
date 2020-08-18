@@ -1,7 +1,7 @@
 import UIKit
 
-extension String {
-    open func calculateTextFieldHeight(width: CGFloat, font: UIFont) -> CGFloat {
+public extension String {
+    public func calculateTextFieldHeight(width: CGFloat, font: UIFont) -> CGFloat {
         let string = NSAttributedString(string: self, attributes: [NSAttributedString.Key.font : font])
         
         let maxSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
