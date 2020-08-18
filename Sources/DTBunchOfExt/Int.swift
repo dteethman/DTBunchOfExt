@@ -1,4 +1,4 @@
-extension Int {
+public extension Int {
     public func getNoun(_ root: String, singleEnd: String, dualEnd: String, multipleEnd: String) -> String {
         var resStr = root
         switch self % 10 {

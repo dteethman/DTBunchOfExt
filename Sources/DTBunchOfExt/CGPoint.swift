@@ -1,6 +1,6 @@
 import UIKit
 
-extension CGPoint {
+public extension CGPoint {
     public init(center: CGPoint, radius: CGFloat, angle: CGFloat) {
         let X = center.x + radius * CGFloat(cos(angle))
         let Y = center.y + radius * CGFloat(sin(angle))

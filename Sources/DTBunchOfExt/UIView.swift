@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIView {
+public extension UIView {
     public func findViewController() -> UIViewController? {
         if let nextResponder = self.next as? UIViewController {
             return nextResponder

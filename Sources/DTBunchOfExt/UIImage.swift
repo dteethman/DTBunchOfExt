@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     public func maskWithColor(color: UIColor) -> UIImage? {
         let maskImage = cgImage!
 

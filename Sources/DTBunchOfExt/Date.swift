@@ -1,6 +1,6 @@
 import UIKit
 
-extension Date {
+public extension Date {
     static public var yesterday: Date { return Date().dayBefore }
     static public var tomorrow:  Date { return Date().dayAfter }
     public var dayBefore: Date {
