@@ -1,18 +1,18 @@
 public extension Int {
     public func getNoun(_ root: String, singleEnd: String, dualEnd: String, multipleEnd: String) -> String {
-        var resStr = root
+        var resStr = ""
         switch self % 10 {
         case 1:
-            resStr += singleEnd
+            resStr = root + singleEnd
         case 2, 3, 4:
-            resStr += dualEnd
+            resStr = root + dualEnd
         default:
-            resStr += multipleEnd
+            resStr = root + multipleEnd
         }
         
         switch self % 100 {
-        case 11, 12:
-            resStr += multipleEnd
+        case 11, 12, 13, 14:
+            resStr = root + multipleEnd
         default:
             break
         }
