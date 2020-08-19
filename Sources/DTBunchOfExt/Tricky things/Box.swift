@@ -1,8 +1,8 @@
-open class Box<T> {
-    typealias Listener = (T) -> Void
-    open var listener: Listener?
+public class Box<T> {
+    public typealias Listener = (T) -> Void
+    public var listener: Listener?
     
-    open var value: T {
+    public var value: T {
         didSet {
             listener?(value)
         }
