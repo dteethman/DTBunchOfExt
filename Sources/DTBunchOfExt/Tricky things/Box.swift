@@ -1,18 +1,18 @@
 open class Box<T> {
     typealias Listener = (T) -> Void
-    var listener: Listener?
+    open var listener: Listener?
     
-    var value: T {
+    open var value: T {
         didSet {
             listener?(value)
         }
     }
     
-    init(_ value: T) {
+    public init(_ value: T) {
         self.value = value
     }
     
-    func bind(listener: Listener?) {
+    public func bind(listener: Listener?) {
         self.listener = listener
         listener?(value)
     }
