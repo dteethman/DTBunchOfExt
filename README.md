@@ -79,5 +79,167 @@ print(interval.timeString)
 
 
 
+### Date
+#### yesterday
+
+```swift
+static public var yesterday: Date
+```
+Computed value that returns the Date object of the previous day of system date where time is noon.
+
+##### Example
+
+```swift
+let date = Date()
+print(date)
+// 2020-08-19 14:33:16 +0000
+let yesterday = Date.yesterday
+print(yesterday)
+// 2020-08-18 09:00:00 +0000
+```
+#### tomorrow
+
+```swift
+static public var tomorrow: Date
+```
+Computed value that returns the Date object of the next day of system date where time is noon.
+
+##### Example
+
+```swift
+let date = Date()
+print(date)
+// 2020-08-19 14:33:16 +0000
+let tomorrow = Date.tomorrow
+print(tomorrow)
+// 2020-08-20 09:00:00 +0000
+```
+
+#### dayBefore
+
+```swift
+public var dayBefore: Date
+```
+Computed value that returns the Date object of the previous day to applied Date where time is noon.
+
+##### Example
+
+```swift
+var dateComponents = DateComponents()
+dateComponents.year = 2020
+dateComponents.month = 01
+dateComponents.day = 10
+dateComponents.timeZone = Calendar.current.timeZone
+dateComponents.hour = 12
+dateComponents.minute = 28
+
+if let date = Calendar.current.date(from: dateComponents) {
+    print(date)
+    print(date.dayBefore)
+}
+// 2020-01-10 09:28:00 +0000
+// 2020-01-09 09:00:00 +0000
+```
+#### dayAfter
+
+```swift
+public var dayAfter: Date
+```
+Computed value that returns the Date object of the next day to applied Date where time is noon.
+
+##### Example
+
+```swift
+var dateComponents = DateComponents()
+dateComponents.year = 2020
+dateComponents.month = 01
+dateComponents.day = 10
+dateComponents.timeZone = Calendar.current.timeZone
+dateComponents.hour = 12
+dateComponents.minute = 28
+
+if let date = Calendar.current.date(from: dateComponents) {
+    print(date)
+    print(date.dayAfter)
+}
+// 2020-01-10 09:28:00 +0000
+// 2020-01-11 09:00:00 +0000
+```
+
+#### noon
+
+```swift
+public var noon: Date
+```
+Computed value that returns the Date object of applied Date where time is noon.
+
+##### Example
+
+```swift
+var dateComponents = DateComponents()
+dateComponents.year = 2020
+dateComponents.month = 01
+dateComponents.day = 10
+dateComponents.timeZone = Calendar.current.timeZone
+dateComponents.hour = 12
+dateComponents.minute = 28
+
+if let date = Calendar.current.date(from: dateComponents) {
+    print(date)
+    print(date.noon)
+}
+// 2020-01-10 09:28:00 +0000
+// 2020-01-10 09:00:00 +0000
+```
+
+#### isLastDayOfMonth
+
+```swift
+public var isLastDayOfMonth: Bool
+```
+Computed value that returns `true` when applied Date is last day of month, `false` otherwise.
+
+##### Example
+
+```swift
+var dateComponents = DateComponents()
+dateComponents.year = 2020
+dateComponents.month = 01
+dateComponents.day = 31
+dateComponents.timeZone = Calendar.current.timeZone
+dateComponents.hour = 12
+dateComponents.minute = 28
+
+if let date = Calendar.current.date(from: dateComponents) {
+    print(date)
+    print(date.isLastDayOfMonth)
+}
+// 2020-01-31 09:28:00 +0000
+// true
+```
+
+
+
+### CGPoint
+#### init(center: CGPoint, radius: CGFloat, angle: CGFloat)
+
+```swift
+public init(center: CGPoint, radius: CGFloat, angle: CGFloat)
+```
+Initializer that accepts input parameters center, radius and angle. Useful for work with circles and circular UI elements.
+
+##### Example
+
+```swift
+import UIKit
+
+let center = CGPoint(x: 100, y: 100)
+let radius: CGFloat = 50
+let angle = CGFloat.pi
+
+let pointOnCircle = CGPoint(center: center, radius: radius, angle: angle)
+print(pointOnCircle)
+// (50.0, 100.0)
+```
 TODO: Describe all methods
 TODO: Tests
