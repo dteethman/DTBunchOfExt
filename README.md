@@ -22,7 +22,7 @@ let twelve = 12
 
 let root = "коти"
 let singleEnd = "к"
-let dualEnd = "а"
+let dualEnd = "ка"
 let multipleEnd = "ков"
 
 print("\(one) \(one.getNoun(root, singleEnd: singleEnd, dualEnd: dualEnd, multipleEnd: multipleEnd) )")
@@ -31,7 +31,7 @@ print("\(five) \(five.getNoun(root, singleEnd: singleEnd, dualEnd: dualEnd, mult
 print("\(twelve) \(twelve.getNoun(root, singleEnd: singleEnd, dualEnd: dualEnd, multipleEnd: multipleEnd) )")
 
 // 1 котик
-// 2 котиа
+// 2 котика
 // 5 котиков
 // 12 котиков
 ```
