@@ -241,5 +241,38 @@ let pointOnCircle = CGPoint(center: center, radius: radius, angle: angle)
 print(pointOnCircle)
 // (50.0, 100.0)
 ```
+
+
+
+### UIColor
+#### rgba
+
+```swift
+public var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+```
+Computed value that returns the tuple of color values in the RGB system.
+
+##### Example
+
+```swift
+print(UIColor.systemPink.rgba)
+// (red: 1.0, green: 0.17647058823529413, blue: 0.3333333333333333, alpha: 1.0)
+```
+#### getGradientColor
+
+```swift
+open func getGradientColor(at percent: CGFloat, with color: UIColor) -> UIColor
+```
+Function that returns UIColor for a linear gradient between two colors at specific points from 0 to 1.
+
+##### Example
+
+```swift
+let black = UIColor.black
+let red = UIColor.red
+let halfGrColor = black.getGradientColor(at: 0.5, with: red)
+print(halfGrColor.rgba)
+// (red: 0.5, green: 0.0, blue: 0.0, alpha: 1.0)
+```
 TODO: Describe all methods
 TODO: Tests
