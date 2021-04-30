@@ -43,7 +43,8 @@ public extension UIColor {
             }
         }
 
-        return UIColor.black
+        self.init(red: 1, green: 1, blue: 1, alpha: 1)
+        return
     }
 }
 
